@@ -9,11 +9,11 @@ public class Comment extends Component {
 
     public Comment(int lineNumber, String content) {
         super(lineNumber, CommentConverter.getSingleton());
-        this.content = content;
+        this.content = content.trim();
 
-        checkOnException(content, "content", "constructor");
+        checkOnException(this.content, "content", "constructor");
 
-        this.comment = this.converter.getWithoutSubString(content);
+        this.comment = this.converter.getWithoutSubString(this.content).trim();
     }
 
     public String getComment() {
@@ -22,9 +22,9 @@ public class Comment extends Component {
 
     @Override
     public void checkOnException(String content, String nameArgument, String nameOperation) {
+        IsNotExceptionInfo info = new IsNotExceptionInfo(nameArgument, "comment", nameOperation, content);
         try {
             if (this.converter.validate(content)) return;
-            IsNotExceptionInfo info = new IsNotExceptionInfo(nameArgument, "comment", nameOperation, content);
             throw new IsNotCommentException(info);
         } catch (IsNotCommentException e) {
             throw new RuntimeException(e);

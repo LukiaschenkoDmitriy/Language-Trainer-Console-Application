@@ -22,7 +22,7 @@ public abstract class AbstractConverter {
 
     public String getWithoutSubString(String line) {
         if (!this.validate(line)) return "";
-        line = line.replaceAll(this.subString, "");
+        line = (String) line.subSequence(subString.length(), line.length());
         return line.trim();
     }
 

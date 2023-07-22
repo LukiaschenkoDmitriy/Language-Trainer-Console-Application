@@ -1,5 +1,4 @@
 package LTCA.Converter;
-
 public final class CommentConverter extends AbstractConverter {
     private static CommentConverter SINGLETON = null;
     public final static String SUB_STRING = "#";
