@@ -1,5 +1,7 @@
 package LTCA.Exception;
 
+import LTCA.Converter.AbstractConverter;
+
 public abstract class AbstractIsNotException extends Exception {
     private static final String FORMAT_MESSAGE = "Argument \"%s\" in %s \"%s\" %s \n\"%s\" %s \n%s";
     private static final String FORMAT_HELP_MESSAGE = "The %s must have the \"%s\" character on the %s of the line";
