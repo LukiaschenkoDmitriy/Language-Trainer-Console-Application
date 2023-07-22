@@ -21,7 +21,7 @@ public abstract class AbstractIsNotException extends Exception {
                 message,
                 info.content,
                 message,
-                String.format(FORMAT_HELP_MESSAGE, componentName, componentSubString, inEnd ? "beginning" : "end3"))
+                String.format(FORMAT_HELP_MESSAGE, componentName, componentSubString, !inEnd ? "beginning" : "end"))
         );
     }
 }
