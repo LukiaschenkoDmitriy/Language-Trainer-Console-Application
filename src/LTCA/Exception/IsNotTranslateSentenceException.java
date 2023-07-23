@@ -1,6 +1,6 @@
-package LTCA.Exception;
+package LTCA.App.Exception;
 
-import LTCA.Converter.TranslateSentenceConverter;
+import LTCA.App.Converter.TranslateSentenceConverter;
 
 public class IsNotTranslateSentenceException extends AbstractIsNotException {
     private static String MESSAGE = "is not translate sentence";

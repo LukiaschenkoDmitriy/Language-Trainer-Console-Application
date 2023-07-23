@@ -1,9 +1,8 @@
-package LTCA.Entity;
+package LTCA.App.Entity;
 
-import LTCA.Converter.HardSentenceConverter;
-import LTCA.Exception.IsNotExceptionInfo;
-import LTCA.Exception.IsNotHardSentenceException;
-import LTCA.Exception.IsNotTitleException;
+import LTCA.App.Converter.HardSentenceConverter;
+import LTCA.App.Exception.IsNotExceptionInfo;
+import LTCA.App.Exception.IsNotHardSentenceException;
 
 public class HardSentence extends Component {
     private String sentence;

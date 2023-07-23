@@ -1,6 +1,6 @@
-package LTCA.Exception;
+package LTCA.App.Exception;
 
-import LTCA.Converter.CommentConverter;
+import LTCA.App.Converter.CommentConverter;
 
 public class IsNotCommentException extends AbstractIsNotException {
     private static String MESSAGE = "is not comment";

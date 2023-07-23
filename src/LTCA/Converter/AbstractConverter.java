@@ -1,5 +1,8 @@
 package LTCA.Converter;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 public abstract class AbstractConverter {
     private final String subString;
     private boolean inEnd = false;
@@ -21,14 +24,12 @@ public abstract class AbstractConverter {
     }
 
     public String getWithoutSubString(String line) {
-        if (!this.validate(line)) return "";
-        line = (String) line.subSequence(subString.length(), line.length());
-        return line.trim();
+        return line.replaceAll("["+subString+"]", "").trim();
     }
 
-    public String addSubStringToContent(String content) {
-        if (this.inEnd) return content.concat(" ").concat(this.subString);
-        return this.subString.concat(" ").concat(content);
+    public String getWithSubString(String content) {
+        String replaceAll = this.getWithoutSubString(content);
+        return subString.concat(" ").concat(replaceAll);
     }
 
     public String[] splitOnSymbol(String content, String symbol) {

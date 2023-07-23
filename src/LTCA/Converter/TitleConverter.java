@@ -1,4 +1,4 @@
-package LTCA.Converter;
+package LTCA.App.Converter;
 
 public class TitleConverter extends AbstractConverter {
     private static TitleConverter SINGLETON = null;

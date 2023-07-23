@@ -1,6 +1,6 @@
-package LTCA.Entity;
+package LTCA.App.Entity;
 
-import LTCA.Converter.AbstractConverter;
+import LTCA.App.Converter.AbstractConverter;
 
 public class Sentence extends Component {
     private String sentence;

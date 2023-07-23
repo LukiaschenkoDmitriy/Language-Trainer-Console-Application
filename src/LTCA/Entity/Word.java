@@ -1,8 +1,8 @@
-package LTCA.Entity;
+package LTCA.App.Entity;
 
-import LTCA.Converter.WordConverter;
-import LTCA.Exception.IsNotExceptionInfo;
-import LTCA.Exception.IsNotWordException;
+import LTCA.App.Converter.WordConverter;
+import LTCA.App.Exception.IsNotExceptionInfo;
+import LTCA.App.Exception.IsNotWordException;
 
 public class Word extends Component {
     private static String SPLIT_SYMBOL = "-";

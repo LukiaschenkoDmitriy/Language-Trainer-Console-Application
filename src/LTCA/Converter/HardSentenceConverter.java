@@ -1,4 +1,4 @@
-package LTCA.Converter;
+package LTCA.App.Converter;
 
 public class HardSentenceConverter extends AbstractConverter {
     private static HardSentenceConverter SINGLETON = null;
