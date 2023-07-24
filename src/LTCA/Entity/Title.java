@@ -1,8 +1,8 @@
-package LTCA.App.Entity;
+package LTCA.Entity;
 
-import LTCA.App.Converter.TitleConverter;
-import LTCA.App.Exception.IsNotExceptionInfo;
-import LTCA.App.Exception.IsNotTitleException;
+import LTCA.Converter.TitleConverter;
+import LTCA.Exception.IsNotExceptionInfo;
+import LTCA.Exception.IsNotTitleException;
 
 public class Title extends Component{
     private String title;

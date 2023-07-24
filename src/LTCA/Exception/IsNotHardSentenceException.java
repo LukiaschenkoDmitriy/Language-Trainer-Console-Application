@@ -1,6 +1,6 @@
-package LTCA.App.Exception;
+package LTCA.Exception;
 
-import LTCA.App.Converter.HardSentenceConverter;
+import LTCA.Converter.HardSentenceConverter;
 
 public class IsNotHardSentenceException extends AbstractIsNotException {
     private static String MESSAGE = "is not hard sentence";

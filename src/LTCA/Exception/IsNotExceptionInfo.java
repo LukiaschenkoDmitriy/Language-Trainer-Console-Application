@@ -1,4 +1,4 @@
-package LTCA.App.Exception;
+package LTCA.Exception;
 
 public class IsNotExceptionInfo {
     public String nameClass;

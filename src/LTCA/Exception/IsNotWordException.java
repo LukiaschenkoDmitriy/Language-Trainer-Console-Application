@@ -1,7 +1,7 @@
-package LTCA.App.Exception;
+package LTCA.Exception;
 
-import LTCA.App.Converter.CommentConverter;
-import LTCA.App.Converter.WordConverter;
+import LTCA.Converter.CommentConverter;
+import LTCA.Converter.WordConverter;
 
 public class IsNotWordException extends AbstractIsNotException {
     private static String MESSAGE = "is not word";
