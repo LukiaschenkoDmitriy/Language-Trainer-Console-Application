@@ -16,8 +16,8 @@ class TitleTest {
     @ParameterizedTest(name = "Title width argument \"{0}\"")
     @ValueSource(strings = {"hello world", "#hello world", "!hello world", "$hello world", "h#ello world", "@hello world", "//hello world"})
     void checkOnException(String content) {
-        Title rightHardSentence = new Title(1, "*hello world");
-        IsNotExceptionInfo info = rightHardSentence.getIsNotExceptionInfo(content, "content", "constructor");
+        Title rightTitle = new Title(1, "*hello world");
+        IsNotExceptionInfo info = rightTitle.getIsNotExceptionInfo(content, "content", "constructor");
 
         assertThrows(RuntimeException.class, () -> {
             new Title(1, content);

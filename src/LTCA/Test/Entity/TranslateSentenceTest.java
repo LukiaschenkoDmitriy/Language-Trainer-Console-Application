@@ -16,8 +16,8 @@ class TranslateSentenceTest {
     @ParameterizedTest(name = "TranslateSentence width argument \"{0}\"")
     @ValueSource(strings = {"hello world", "#hello world", "*hello world", "!hello world", "h#ello world", "@hello world", "//hello world"})
     void checkOnException(String content) {
-        TranslateSentence rightHardSentence = new TranslateSentence(1, "$hello world");
-        IsNotExceptionInfo info = rightHardSentence.getIsNotExceptionInfo(content, "content", "constructor");
+        TranslateSentence rightTranslateSentence = new TranslateSentence(1, "$hello world");
+        IsNotExceptionInfo info = rightTranslateSentence.getIsNotExceptionInfo(content, "content", "constructor");
 
         assertThrows(RuntimeException.class, () -> {
             new TranslateSentence(1, content);
