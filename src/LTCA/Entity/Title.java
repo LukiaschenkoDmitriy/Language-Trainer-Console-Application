@@ -21,12 +21,17 @@ public class Title extends Component{
 
     @Override
     public void checkOnException(String content, String nameArgument, String nameOperation) {
-        IsNotExceptionInfo info = new IsNotExceptionInfo(nameArgument, "title", nameOperation, content);
+        IsNotExceptionInfo info = this.getIsNotExceptionInfo(content, nameArgument, nameOperation);
         try {
             if (!this.converter.validate(content))
                 throw new IsNotTitleException(info);
         } catch (IsNotTitleException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public IsNotExceptionInfo getIsNotExceptionInfo(String content, String nameArgument, String nameOperation) {
+        return new IsNotExceptionInfo(nameArgument, "title", nameOperation, content);
     }
 }

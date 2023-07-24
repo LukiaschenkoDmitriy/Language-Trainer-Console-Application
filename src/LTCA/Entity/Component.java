@@ -1,6 +1,7 @@
 package LTCA.Entity;
 
 import LTCA.Converter.AbstractConverter;
+import LTCA.Exception.IsNotExceptionInfo;
 
 public abstract class Component {
     protected AbstractConverter converter;
@@ -24,4 +25,5 @@ public abstract class Component {
     }
 
     public abstract void checkOnException(String content, String nameArgument, String nameOperation);
+    public abstract IsNotExceptionInfo getIsNotExceptionInfo(String content, String nameArgument, String nameOperation);
 }
