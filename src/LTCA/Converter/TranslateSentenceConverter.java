@@ -1,4 +1,4 @@
-package LTCA.App.Converter;
+package LTCA.Converter;
 
 public class TranslateSentenceConverter extends AbstractConverter {
     private static TranslateSentenceConverter SINGLETON = null;

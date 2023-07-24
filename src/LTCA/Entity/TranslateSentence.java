@@ -1,8 +1,8 @@
-package LTCA.App.Entity;
+package LTCA.Entity;
 
-import LTCA.App.Converter.TranslateSentenceConverter;
-import LTCA.App.Exception.IsNotExceptionInfo;
-import LTCA.App.Exception.IsNotTranslateSentenceException;
+import LTCA.Converter.TranslateSentenceConverter;
+import LTCA.Exception.IsNotExceptionInfo;
+import LTCA.Exception.IsNotTranslateSentenceException;
 
 public class TranslateSentence extends Component {
     private String translate;

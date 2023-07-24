@@ -1,7 +1,7 @@
-package LTCA.App.Exception;
+package LTCA.Exception;
 
-import LTCA.App.Converter.CommentConverter;
-import LTCA.App.Converter.TitleConverter;
+import LTCA.Converter.CommentConverter;
+import LTCA.Converter.TitleConverter;
 
 public class IsNotTitleException extends AbstractIsNotException {
     private static String MESSAGE = "is not title";

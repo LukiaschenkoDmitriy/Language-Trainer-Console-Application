@@ -1,4 +1,4 @@
-package LTCA.App.Exception;
+package LTCA.Exception;
 
 public abstract class AbstractIsNotException extends Exception {
     private static final String FORMAT_MESSAGE = "Argument \"%s\" in %s \"%s\" %s \n\"%s\" %s \n%s";

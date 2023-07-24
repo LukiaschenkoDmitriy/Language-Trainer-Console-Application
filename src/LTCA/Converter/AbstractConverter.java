@@ -1,8 +1,5 @@
 package LTCA.Converter;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
 public abstract class AbstractConverter {
     private final String subString;
     private boolean inEnd = false;
