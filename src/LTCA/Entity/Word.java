@@ -1,6 +1,7 @@
 package LTCA.Entity;
 
 import LTCA.Converter.WordConverter;
+import LTCA.Exception.HaventSeparateSymbolException;
 import LTCA.Exception.IsNotExceptionInfo;
 import LTCA.Exception.IsNotWordException;
 
@@ -33,9 +34,11 @@ public class Word extends Component {
     public void checkOnException(String content, String nameArgument, String nameOperation) {
         IsNotExceptionInfo info = this.getIsNotExceptionInfo(content, nameArgument, nameOperation);
         try {
-            if (!this.converter.validate(content)) throw new IsNotWordException(info);
-            if (!this.converter.contentContainsSubString(content, SPLIT_SYMBOL)) throw new IsNotWordException(info);
-        } catch (IsNotWordException e) {
+            if (!this.converter.validate(content))
+                throw new IsNotWordException(info);
+            if (!this.converter.contentContainsSubString(content, SPLIT_SYMBOL))
+                throw new HaventSeparateSymbolException(content, SPLIT_SYMBOL);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
