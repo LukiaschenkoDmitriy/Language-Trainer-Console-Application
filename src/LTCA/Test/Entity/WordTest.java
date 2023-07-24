@@ -1,11 +1,9 @@
 package LTCA.Test.Entity;
 
 import LTCA.Converter.WordConverter;
-import LTCA.Entity.TranslateSentence;
 import LTCA.Entity.Word;
 import LTCA.Exception.HaventSeparateSymbolException;
 import LTCA.Exception.IsNotExceptionInfo;
-import LTCA.Exception.IsNotTranslateSentenceException;
 import LTCA.Exception.IsNotWordException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
