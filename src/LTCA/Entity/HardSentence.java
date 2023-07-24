@@ -19,12 +19,17 @@ public class HardSentence extends Component {
 
     @Override
     public void checkOnException(String content, String nameArgument, String nameOperation) {
-        IsNotExceptionInfo info = new IsNotExceptionInfo(nameArgument, "hardSentence", nameOperation, content);
+        IsNotExceptionInfo info = getIsNotExceptionInfo(content, nameArgument, nameOperation);
         try {
             if (!this.converter.validate(content))
                 throw new IsNotHardSentenceException(info);
         } catch (IsNotHardSentenceException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public IsNotExceptionInfo getIsNotExceptionInfo(String content, String nameArgument, String nameOperation) {
+        return new IsNotExceptionInfo(nameArgument, "hardSentence", nameOperation, content);
     }
 }

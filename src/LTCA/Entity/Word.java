@@ -31,12 +31,17 @@ public class Word extends Component {
 
     @Override
     public void checkOnException(String content, String nameArgument, String nameOperation) {
-        IsNotExceptionInfo info = new IsNotExceptionInfo(nameArgument, "word", nameOperation, content);
+        IsNotExceptionInfo info = this.getIsNotExceptionInfo(content, nameArgument, nameOperation);
         try {
             if (!this.converter.validate(content)) throw new IsNotWordException(info);
             if (!this.converter.contentContainsSubString(content, SPLIT_SYMBOL)) throw new IsNotWordException(info);
         } catch (IsNotWordException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public IsNotExceptionInfo getIsNotExceptionInfo(String content, String nameArgument, String nameOperation) {
+        return new IsNotExceptionInfo(nameArgument, "word", nameOperation, content);
     }
 }
